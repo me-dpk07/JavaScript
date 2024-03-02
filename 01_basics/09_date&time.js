@@ -21,7 +21,7 @@ console.log(Math.floor(Date.now()/1000));  // to get lower num
 let newDate = new Date()
 console.log(newDate);
 console.log(newDate.getMonth() + 1);  // to get month only
-console.log(newDate.getDay());     // to get the day only 
+console.log(newDate.getDay());    // to get the day only 
 
 // `${newDate.getDay()} and the time `
 
