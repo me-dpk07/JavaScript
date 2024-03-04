@@ -10,7 +10,7 @@ console.log(myName)
 // both is showing different result because stack memory always gives you copy of the reference old value will return old 
 
 
-// Heap memory ==> ( used for non primitive datatype ) chjhanges makes in original value , didn't give you a copy 
+// Heap memory ==> ( used for non primitive datatype ) changes makes in original value , didn't give you a copy 
 
 let userOne = {
     name : "Deepak",

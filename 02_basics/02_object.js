@@ -109,6 +109,9 @@ const {courseInstructor: instructor} = course
 // console.log(courseInstructor);
 console.log(instructor);
 
+
+//Json Api
+
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",

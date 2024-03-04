@@ -1,14 +1,14 @@
 const name = "deepak"
 const repoCount = 50
 
-// console.log(name + repoCount + " Value");
+console.log(name + repoCount + " Value");
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);   // ${}  ==> used to denote varriables inside ``
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);   // ${}  ==> used to denote variables inside ``
 
 const gameName = new String('deepak-hc-com')
 
 // console.log(gameName[0]);  ==> used to get key value of string
-// console.log(gameName.__proto__);  
+// console.log(gameName.__proto__);  ==> used to add
 
 
 /*String.prototype[@@iterator]()

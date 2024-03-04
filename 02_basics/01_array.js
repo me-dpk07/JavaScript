@@ -10,7 +10,7 @@ console.log(myArr[1]);   // to access the element of array i.e 1st element = 0 h
 
 // myArr.push()   ===> to add elements in the array at last 
 // myArr.push(7) ===> to add elements in the array at last i.e 7 will be added here
-// myArr.pop()   ===> to reeeemove elements in the array at last 
+// myArr.pop()   ===> to remove elements in the array at last 
 
 // myArr.unshift(9)   ==> to add an element in starting
 // myArr.shift()   ==> to remove an element in starting
@@ -43,8 +43,8 @@ const dc_heros = ["superman", "flash", "batman"]
 // marvel_heros.push(dc_heros)   ==> will add array in array and 2nd whole array will be a single element
 // its a bad practice 
 
-// console.log(marvel_heros);
-// console.log(marvel_heros[3][1]);  ==> will access 1st of 3rd element which is flash here
+console.log(marvel_heros);
+console.log(marvel_heros[3][1]);  //==> will access 1st of 3rd element which is flash here
 
 const allHeros = marvel_heros.concat(dc_heros) // .concate will add both the array and return new array
 console.log(allHeros);
