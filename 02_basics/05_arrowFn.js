@@ -27,7 +27,7 @@ const user = {
 
 const chai =  () => {
     let username = "deepak"
-    console.log(this);    // will show {} => empty 
+    console.log(this);    // will show {} => empty in node and window in console because it is a global excecution context
 }
 
 
