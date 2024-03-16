@@ -46,10 +46,28 @@ const debitCard = true
 const loggedInFromGoogle = false
 const loggedInFromEmail = true
 
-if (userLoggedIn && debitCard && 2==3) {   // ==> all three condition will be checked 
+if (userLoggedIn && debitCard && 2==3) {   // ==> && is and operators, all three condition will be checked 
     console.log("Allow to buy course");
 }
 
-if (loggedInFromGoogle || loggedInFromEmail) {    // ==> use pipe sign to check if any one of the statement is true then value should be printed
+if (loggedInFromGoogle || loggedInFromEmail) {    // ==> || is or operator , use pipe sign to check if any one of the statement is true then value should be printed
     console.log("User logged in");
 }
+
+// both && , || are logical operators
+
+// Nullish Coalescing Operator (??): null undefined   ==> jb null ya undefined ki wjh se error aata hai usse bachne k liye use hota null ya undefined ki jgh uske baju wala value print hoga
+
+let val1;
+// val1 = 5 ?? 10   ==> 5 will print 
+// val1 = null ?? 10     ==> 10 will print 
+// val1 = undefined ?? 15   ==> 15 will print
+val1 = null ?? 10 ?? 20    //   ==> 10 will print print it is coming just after null
+console.log(val1);
+
+// Terniary Operator
+
+// condition ? true : false
+
+const iceTeaPrice = 100
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
