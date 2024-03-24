@@ -1,31 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
-    <title>DOM learning</title>
-    <style>
-        .bg-black{
-            background-color: #212121;
-            color: #fff;
-        }
-    </style>
-</head>
-<body class="bg-black">
-    <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <input type="password" name="" id="">
+//we manipulated a wikipedia page in console by ==> document.getElementById('firstHeading').innerHTML= "<h1>DEEPAK<h1/>"
 
-        <ul>
-            <li class="list-item">one</li>
-            <li class="list-item">two</li>
-            <li class="list-item">three</li>
-            <li class="list-item">four</li>
-        </ul>
-    </div>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>DOM learning</title>
+        <style>
+            .bg-black{
+                background-color: #212121;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body class="bg-black">
+        <div >
+            <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <input type="password" name="" id="">
+    
+            <ul>
+                <li class="list-item">one</li>
+                <li class="list-item">two</li>
+                <li class="list-item">three</li>
+                <li class="list-item">four</li>
+            </ul>
+        </div>
+    </body>
+    </html>
+    
+    <!--  
+    document.getElementById('title').getAttribute('id')   ==> use to get ki id k andr kya h
+    document.getElementById('title').getAttribute('class')   ==>use to get ki class k andr kya h
+    document.getElementById('title').setAttribute('class','test')==> class ki jagah test replace ho jyega
+    document.getElementById('title').setAttribute('class','test heading')==> class ki jagah test heading replace ho jyega previous wala overwrite ho jayega 
+    
+    ******puting style on attributes****** 
+    
+    title.style.backgroundColor = "green"
+    title.style.padding = "20px"
+    title.style.borderRadius = "15px"
+    
+    
+    title.innerText    ===> jo page pe show hota whi hota   eg yha DOM learning on Chai aur code show hoga 
+    title.innerContent   ===> jo page pe show hota + wo bhi jo css property lgake hide hai dono show hoga  eg yha DOM learning on Chai aur code test span show hoga
+    title.innerHTML   ===> jo page pe show hota + koi html hai wo bhi show hoga eg yha DOM learning on Chai aur code show hoga <span style="display: none;">test text</span>
+    
+    ******queryselector    ==> always select 1st item*****
+    
+    document.querySelector(#title)===> for selection of id 
+    document.querySelector(.heading)===> for selection of class .... heading and title are used as class and id above 
+    
+    
+    *********we can also store querySelected variables ********
+    
+    document.querySelector('ul')
+    const myul = document.querySelector('ul') 
+    myul.querySelector('li')     ===> here querySelector select 1st li kyuki queryselector pehla hi item select krta
+    const turnGreen = myul.querySelector('li')
+    
+    turnGreen.style.backgroundColor = "green"
+    turnGreen.style.padding = "20px"    
+    
+    
+    *****what if agr 2nd li use krna ho ya ek se jyada item ho ====> we use querySelectorAll*****
+    
+    console me node list milti hai which is similar to array but not array 
+    
+    const tempLiList = document.querySelectorAll("li")
+    tempLiList[1].style.backgroundColor = "green"
+    
+    
+    *****node list has a prototype property called for each we can apply loop in console***
+    
+    const tempLiList = document.querySelectorAll("li")
+    tempLiList.forEach(function(l){
+        l.style.backgroundColor="green"
+    })
+    
+    
+    ********getElementByClassName    ===> always return values in html collection 
+    html collection me for each loop nhi hota to pehle hm use convert krenge ek aaray me by Array.from method
+    
+    document.getElementByClassName("list-item") ===> will give html collecton values do we convert this into array and then apply loop
+    
+     document.getElementByClassName("list-item")
+     const tempLiList = document.getElementByClassName("list-item")
+    Array.from("tempLilist")
+    const convertedArray = Array.from("tempLilist")
+    convertedArray.forEach(function(li){
+        li.style.color='green'
+    })
