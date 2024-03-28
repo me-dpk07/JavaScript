@@ -13,13 +13,13 @@
     const div = document.createElement('div')
     console.log(div);
     div.className = "main"
-    div.id = Math.round(Math.random() * 10 + 1)
+    div.id = Math.round(Math.random() * 10 + 1)   // for fun we created a random id
     div.setAttribute("title", "generated title")
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
+    // to display on console page 
     const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
+    div.appendChild(addText) // to append a child named addText in div  
 
     document.body.appendChild(div)
 </script>
