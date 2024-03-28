@@ -12,6 +12,7 @@
     </ul>
 </body>
 <script>
+    // to add value in DOM  ===> method 1
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
@@ -20,6 +21,8 @@
     addLanguage("python")
     addLanguage("typescript")
 
+    // method 2 ==> recommended
+
     function addOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
@@ -27,15 +30,17 @@
     }
     addOptiLanguage('golang')
 
-    //Edit
+    //Edit  ==> method 1
     const secondLang = document.querySelector("li:nth-child(2)")
     console.log(secondLang);
-    //secondLang.innerHTML = "Mojo"
+    secondLang.innerHTML = "Mojo"
+
+    // edit ==> method 2
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
 
-    //edit
+    //edit ==> method 3
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = '<li>TypeScript</li>'
 
