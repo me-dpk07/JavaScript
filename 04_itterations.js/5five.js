@@ -42,9 +42,9 @@ const books = [
 // const newNums = myNumers.map( (num) => { return num + 10})
 
 //chaining method - map k andr map or map k andr filter
-const newNums = myNumers
-                .map((num) => num * 10 )
-                .map( (num) => num + 1) // 1 will added to the values jo 10 se multiplied hote h
-                .filter( (num) => num >= 40)
+// const newNums = myNumers
+//                 .map((num) => num * 10 )
+//                 .map( (num) => num + 1) // 1 will added to the values jo 10 se multiplied hote h
+//                 .filter( (num) => num >= 40)
 
 console.log(newNums);
